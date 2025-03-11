@@ -1,0 +1,161 @@
+body {
+  display: flex;
+  text-align: center;
+  background-color: rgb(14, 14, 14);
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+#text {
+  position: relative;
+  background-image: url(https://www.shutterstock.com/image-illustration/2d-brick-wall-texture-moss-600nw-2068449416.jpg);
+  background-size: 100%;
+  color: #ffffff;
+  padding: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 
+    -1px -1px 0px black,  
+    1px -1px 0px black,
+    -1px 1px 0px black,
+    1px 1px 0px black;  /* El borde negro alrededor del texto */
+  
+
+  /*background-size: contain;  Ajusta la imagen para que se vea completa dentro del contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  width: 85%; /* Ajusta el ancho según lo necesites */
+  max-width: 600px; /* Asegura que no se haga demasiado grande */
+}
+
+#game {
+  position: relative; /* Hacemos que el contenedor sea relativo para posicionar los elementos dentro de él */
+  width: 100%; /* Define el ancho del contenedor (80% del body) */
+  max-width: 600px; /* Máximo tamaño de 600px */
+  color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(10, 12, 27, 0.7); /* Fondo oscuro con transparencia */
+  border: 3px solid #535151;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+#controls {
+  background-image: url(https://www.shutterstock.com/image-illustration/2d-brick-wall-texture-moss-600nw-2068449416.jpg);
+  background-size: 100%;
+  display: flex; /* Activamos flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: auto;
+}
+
+#monsterStats {
+  display: flex;
+  display: none;
+  position: absolute;
+  flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 
+    -1px -1px 0px black,  
+    1px -1px 0px black,
+    -1px 1px 0px black,
+    1px 1px 0px black;  /* El borde negro alrededor del texto */
+}
+
+.stat {
+  padding: 10px;
+  padding-right: 20px;
+}
+
+#button1,#button2,#button3 {
+  padding: 10px;
+  cursor: pointer;
+  background-image: url(https://cdn.discordapp.com/attachments/723699097848119330/1348100626331996160/image.png?ex=67ce3c0b&is=67ccea8b&hm=c249eb08fe5e2972acd0bed46566ea2ee0d36e578df067ee01445353f24497ee&),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Filtro de opacidad sobre la imagen */;
+  background-position: center;
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  border-radius: 10px;
+  margin: 5px; /* Esto agrega un margen de 5px alrededor de cada botón */
+}
+
+#button4,#button5,#button6 {
+  padding: 10px;
+  background-image: url(https://cdn.discordapp.com/attachments/723699097848119330/1348100626331996160/image.png?ex=67ce3c0b&is=67ccea8b&hm=c249eb08fe5e2972acd0bed46566ea2ee0d36e578df067ee01445353f24497ee&),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Filtro de opacidad sobre la imagen */;
+  background-position: center;
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  border-radius: 10px;
+  margin: 5px; /* Esto agrega un margen de 5px alrededor de cada botón */
+}
+
+.dragon {
+  position: absolute; /*posicion fija*/
+  display: none;
+  top: -40px;  /* Posición desde el borde superior de la ventana */
+  left: 345px; /* Posición desde el borde izquierdo de la ventana */
+  width: 180px;
+  height: 120px;
+  display: non;
+  position: relative;  /* Para poder usar top y left */
+  
+}
+.slime{
+  position: absolute;
+  display: none;
+  top: 280px;  /* Posición desde el borde superior de la ventana */
+  left: 418px; /* Posición desde el borde izquierdo de la ventana */
+  width: 100px;
+  height: 100px;
+  
+  transform: scaleX(-1); /* Invierte la imagen horizontalmente */
+}
+.golem{
+  position: absolute;
+  display: none;
+  top: 175px;  /* Posición desde el borde superior de la ventana */
+  left: 385px; /* Posición desde el borde izquierdo de la ventana */
+  width: 150px;
+  height: 200px;
+  transform: scaleX(-1); /* Invierte la imagen horizontalmente */
+}
+.caballero{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 240px;  /* Posición desde el borde superior de la ventana */
+  left: -150px; /* Posición desde el borde izquierdo de la ventana */
+}
+#pantalla{
+  max-height: 500vh;
+  min-height: 45vh;
+  background-image: url(https://media.licdn.com/dms/image/v2/D4D12AQENHJv8LnEiig/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1731846202423?e=2147483647&v=beta&t=nOUr4iCGavPUD3UpmFI134eGLEFqPn0deSU7KTq3Hnk);
+  background-position: center;
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+}
+#panel{
+  background-color: #030303a4;
+}
+
+#monsterName {
+  color: #ffcc00; /* Un color dorado para el nombre del monstruo */
+}
+
+#containerbarhealth{
+  width: 90%; /* Ancho completo */
+  height: 15px; /* Altura de la barra */
+  display: flex;
+  position: absolute;
+  align-items: center; /* Centra el contenido horizontalmente */
+  background-color: #ddd; /* Color de fondo (gris claro) */
+  border-radius: 5px; /* Bordes redondeados */
+}
+#barhealth{
+  display: flex;
+  position: absolute;
+  width: 100%; /* Ancho completo */
+  height: 15px; /* Altura de la barra */
+  background-color: green;
+  border-radius: 5px; /* Bordes redondeados */
+  
+}
