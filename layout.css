@@ -70,23 +70,14 @@ body {
   padding-right: 20px;
 }
 
-#button1,#button2,#button3 {
+#button1, #button2, #button3, #button4, #button5, #button6 {
   padding: 10px;
   cursor: pointer;
-  background-image: url(https://cdn.discordapp.com/attachments/723699097848119330/1348100626331996160/image.png?ex=67ce3c0b&is=67ccea8b&hm=c249eb08fe5e2972acd0bed46566ea2ee0d36e578df067ee01445353f24497ee&),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Filtro de opacidad sobre la imagen */;
+  background-image: url(https://cdn.discordapp.com/attachments/723699097848119330/1348100626331996160/image.png?ex=67ce3c0b&is=67ccea8b&hm=c249eb08fe5e2972acd0bed46566ea2ee0d36e578df067ee01445353f24497ee&), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-position: center;
-  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-size: cover;
   border-radius: 10px;
-  margin: 5px; /* Esto agrega un margen de 5px alrededor de cada botón */
-}
-
-#button4,#button5,#button6 {
-  padding: 10px;
-  background-image: url(https://cdn.discordapp.com/attachments/723699097848119330/1348100626331996160/image.png?ex=67ce3c0b&is=67ccea8b&hm=c249eb08fe5e2972acd0bed46566ea2ee0d36e578df067ee01445353f24497ee&),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Filtro de opacidad sobre la imagen */;
-  background-position: center;
-  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-  border-radius: 10px;
-  margin: 5px; /* Esto agrega un margen de 5px alrededor de cada botón */
+  margin: 5px;
 }
 
 .dragon {
@@ -96,7 +87,6 @@ body {
   left: 345px; /* Posición desde el borde izquierdo de la ventana */
   width: 180px;
   height: 120px;
-  display: non;
   position: relative;  /* Para poder usar top y left */
   
 }
@@ -159,3 +149,4 @@ body {
   border-radius: 5px; /* Bordes redondeados */
   
 }
+

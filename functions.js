@@ -290,11 +290,15 @@ function lose() {
   const pantalla =document.getElementById("pantalla")
   pantalla.style.backgroundImage="url(https://media.licdn.com/dms/image/v2/D4D12AQENHJv8LnEiig/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1731846202423?e=2147483647&v=beta&t=nOUr4iCGavPUD3UpmFI134eGLEFqPn0deSU7KTq3Hnk)";
   const slime = document.getElementsByClassName("slime")[0];
+  const nombre = prompt("Perdiste... ¿Tu nombre para guardar tu puntuación?");
+  enviarPuntuacion(nombre, xp); // o gold
   bye();
 }
 
 function winGame() {
   update(locations[6]);
+  const nombre = prompt("¡Ganaste! ¿Cómo te llamás?");
+  enviarPuntuacion(nombre, xp); // o gold, o lo que quieras usar como puntaje
 }
 
 function restart() {
@@ -374,4 +378,18 @@ function bye(){
   const slime = document.getElementsByClassName("slime")[0];
   slime.style.display= "none";
 }
+//Base de datos
+function enviarPuntuacion(nombre, puntos) {
+  fetch('http://localhost:8000/guardar', {
+      method: 'POST',  // Asegúrate de que sea un POST
+      headers: { 
+          'Content-Type': 'application/json' 
+      },
+      body: JSON.stringify({ nombre, puntos })
+  })
+  .then(res => res.json())
+  .then(data => console.log(data.mensaje))
+  .catch(error => console.error('Error:', error));
+}
+
 
